@@ -1,6 +1,6 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, onUnmounted } from 'vue'
 
 import AOS from 'aos'
 
@@ -26,7 +26,7 @@ onMounted(() => {
     AOS.init({
       offset: 150,
     })
-  });
+  }, {once: true});
 })
 
 const props = defineProps(['component'])
@@ -39,7 +39,6 @@ const props = defineProps(['component'])
         <RouterLink to="/about">About</RouterLink>
       </nav>
   </header>-->
-  <RouterView /> 
 
   <template v-if="incompatibleDevice">
     <div style="padding: 100px">Dein Gerät ist zu klein</div>
@@ -92,6 +91,8 @@ const props = defineProps(['component'])
 
     </main>
   </template>
+
+  <RouterView />
 </template>
 
 <style lang="scss">
