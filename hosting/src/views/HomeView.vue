@@ -21,11 +21,13 @@ onMounted(() => {
   
 })
 
+AOS.init({
+  offset: 150,
+})
+
 onMounted(() => {
   window.addEventListener('load', () => {
-    AOS.init({
-      offset: 150,
-    })
+    AOS.refresh()
   }, {once: true});
 })
 
@@ -41,7 +43,7 @@ const props = defineProps(['component'])
   </header>-->
 
   <template v-if="incompatibleDevice">
-    <div style="padding: 100px">Dein Gerät ist zu klein</div>
+    <div style="text-align: center;">Dein Gerät ist zu klein</div>
   </template>
 
   <template v-else>
