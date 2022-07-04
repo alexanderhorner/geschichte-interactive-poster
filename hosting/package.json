@@ -1,0 +1,20 @@
+{
+  "name": "geschichte-interactive-poster",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "watch": "vite build --watch",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "sass": "^1.53.0",
+    "vue": "^3.2.37",
+    "vue-router": "^4.0.16"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "vite": "^2.9.12"
+  }
+}
