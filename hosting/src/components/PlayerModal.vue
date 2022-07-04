@@ -1,6 +1,8 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue';
 
+import X from '@/components/icons/X.vue'
+
 import VuePlyr from 'vue-plyr'
 import 'vue-plyr/dist/vue-plyr.css'
 
@@ -26,7 +28,10 @@ const goBack = () => {
 </script>
 
 <template>
-  <div class="background" @click="goBack()"></div>
+  <div class="background" @click="goBack()">
+    <X class="close"></X>
+  </div>
+
   <div class="modal">
 
     <vue-plyr ref="plyr">
@@ -60,10 +65,13 @@ const goBack = () => {
   right: 0;
   bottom: 0;
   background-color: hsla(0deg, 0%, 0%, 0.5);
-}
 
-html.modal-open {
-  .background {
+  .close {
+    cursor: pointer;
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 }
 

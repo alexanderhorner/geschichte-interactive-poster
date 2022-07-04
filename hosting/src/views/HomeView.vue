@@ -129,7 +129,7 @@ const props = defineProps(['component'])
 
 .content {
   padding-top: 150px;
-  padding-bottom: 500px;
+  padding-bottom: 250px;
   display: grid;
   grid-template-columns: 1fr repeat(5, 2fr) 1fr;
   row-gap: 150px;
