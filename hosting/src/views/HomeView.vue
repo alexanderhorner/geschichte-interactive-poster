@@ -48,8 +48,8 @@ const props = defineProps(['component'])
 
   <template v-else>
 
-    <section data-aos="zoom-in" data-aos-easing="ease-out" data-aos-duration="750" name="top" class="hero-section">
-      <div class="titles" style="overflow: visible;" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="750">
+    <section name="top" class="hero-section">
+      <div class="titles" style="overflow: visible;">
         <h1 class="title-main">Deutschlands Aufschwung</h1>
         <div class="title-secondary">presented by History Extreme</div>
       </div>
@@ -99,7 +99,19 @@ const props = defineProps(['component'])
 
 <style lang="scss">
 
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.7);
+    filter: blur(20px)
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
 .hero-section {
+  
   max-height: 100vw;
   position: absolute;
   left: 0;
@@ -115,18 +127,17 @@ const props = defineProps(['component'])
   background-image: url('@/assets/img/Heilbronn_1945-darker.jpg');
 
   .titles {
+    animation: 1s ease-out 0s 1 zoomIn;
     padding-bottom: 5vh;
 
     .title-main {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
       font-size: 5rem;
-      text-shadow: 0 0 40px black;
       margin: 0;
     }
 
     .title-secondary {
-      text-shadow: 0 0 40px black;
       font-style: italic;
       margin-left: 5px;
     }
