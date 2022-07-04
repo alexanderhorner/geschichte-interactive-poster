@@ -100,6 +100,7 @@ const props = defineProps(['component'])
 <style lang="scss">
 
 .hero-section {
+  max-height: 100vw;
   position: absolute;
   left: 0;
   top: 0;
@@ -138,7 +139,7 @@ const props = defineProps(['component'])
   display: grid;
   grid-template-columns: 1fr repeat(5, 2fr) 1fr;
   row-gap: 150px;
-  margin-top: 100vh;
+  margin-top: min(100vh, 100vw);
 
   .img-big {
     width: 100%;
