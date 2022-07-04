@@ -108,6 +108,9 @@ const props = defineProps(['component'])
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-image: url('@/assets/img/Heilbronn_1945-darker.jpg');
 
   .titles {
