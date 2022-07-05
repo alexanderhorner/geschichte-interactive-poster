@@ -9,11 +9,10 @@ import PlayAudioButton from '@/components/PlayAudioButton.vue';
 const content = ref(null)
 
 const responsiveAnimation = () => {
-  const aosElements = content.value.querySelectorAll('[data-aos]')
+  const aosElements = content.value.querySelectorAll('[data-aosinitial]')
 
   if (window.innerWidth < 1080) {
     aosElements.forEach((element) => {
-      element.dataset.aosinitial = element.dataset.aos
       element.dataset.aos = 'fade-up'
     })
   } else {
@@ -24,9 +23,9 @@ const responsiveAnimation = () => {
 }
 
 onMounted(() => {
-  const aosElements = content.value.querySelectorAll('[data-aos]')
+  const aosElements = content.value.querySelectorAll('[data-aosinitial]')
   aosElements.forEach((element) => {
-    element.dataset.aosinitial = element.dataset.aos
+    element.dataset.aos = element.dataset.aosinitial
   })
   window.addEventListener('resize', responsiveAnimation)
 })
@@ -69,8 +68,8 @@ const props = defineProps(['component'])
     <div>{{ component }}</div>
 
     <section class="cdu-anti-kommunismus">
-      <img data-aos="fade-right" class="img-big " src="@/assets/img/cdu-anti-kommunismus.jpg" alt="Propagandafoto mit Text: CDU schützt vor Enteignung">
-      <div data-aos="fade-left" class="info">
+      <img data-aosinitial="fade-right" class="img-big " src="@/assets/img/cdu-anti-kommunismus.jpg" alt="Propagandafoto mit Text: CDU schützt vor Enteignung">
+      <div data-aosinitial="fade-left" class="info">
         <h2 class="info-headline">Anti Kommunismus</h2>
         <PlayAudioButton></PlayAudioButton>
       </div>
@@ -83,17 +82,17 @@ const props = defineProps(['component'])
     </div> -->
 
     <section class="wirtschaftswunder">
-      <div data-aos="fade-right" class="info">
+      <div data-aosinitial="fade-right" class="info">
         <h2 class="info-headline">Wirtschafts&shy;wunder</h2>
         <div class="info-text" style="margin-bottom: 1rem">„Wohlstand für alle“ - Ludwig Erhard</div>
         <PlayAudioButton></PlayAudioButton>
       </div>
-      <img data-aos="fade-left" class="img-big" src="@/assets/img/wirtschaftswunder.jpg" alt="">
+      <img data-aosinitial="fade-left" class="img-big" src="@/assets/img/wirtschaftswunder.jpg" alt="">
     </section>
 
     <section class="währungsreform">
-      <img data-aos="fade-right" class="img-big" src="@/assets/img/währungsreform.jpg" alt="">
-      <div data-aos="fade-left" class="info">
+      <img data-aosinitial="fade-right" class="img-big" src="@/assets/img/währungsreform.jpg" alt="">
+      <div data-aosinitial="fade-left" class="info">
         <h2 class="info-headline">Währungs&shy;reform</h2>
         <PlayAudioButton></PlayAudioButton>
       </div>
