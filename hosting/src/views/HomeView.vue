@@ -169,8 +169,8 @@ const props = defineProps(['component'])
   margin-top: min(100vh, 100vw);
 
   @media screen and (max-width: 1080px) {
-     grid-template-columns: 20px repeat(5, 1fr) 20px;
-     row-gap: 20px;
+    grid-template-columns: 20px repeat(5, 1fr) 20px;
+    row-gap: 20px;
   }
 
   .img-big {
@@ -185,6 +185,10 @@ const props = defineProps(['component'])
       font-family: 'Playfair Display', serif;
       font-weight: 700;
       font-size: 3rem;
+
+      @media screen and (max-width: 600px) {
+        font-size: 2rem;
+      }
     }
   }
 
