@@ -137,10 +137,19 @@ const props = defineProps(['component'])
     padding-bottom: 5vh;
     margin: 0 2rem;
 
+    @media screen and (max-width: 600px) {
+      font-size: 2.5vw;
+    }
+
+    @media screen and (max-width: 1100px) {
+      text-align: center;
+    }
+
+
     .title-main {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
-      font-size: 5rem;
+      font-size: 5em;
       margin: 0;
     }
 
