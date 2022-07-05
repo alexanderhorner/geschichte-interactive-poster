@@ -54,6 +54,7 @@ const props = defineProps(['component'])
         <RouterLink to="/about">About</RouterLink>
       </nav>
   </header>-->
+  <div class="no-css-grid-support">Dieser Browser ist zu alt. Aktualisieren Sie ihn und versuchen Sie es erneut.</div>
 
   <section name="top" class="hero-section">
     <div class="titles" style="overflow: visible;">
@@ -103,7 +104,23 @@ const props = defineProps(['component'])
   <RouterView />
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+
+.no-css-grid-support {
+  display: none;
+  text-align: center;
+  height: 200px;
+  padding-top: 50px;
+}
+
+@supports not (display: grid) {
+  * {
+    display: none !important;
+  }
+  .no-css-grid-support {
+    display: block !important;
+  }
+}
 
 @keyframes zoomIn {
   0% {
