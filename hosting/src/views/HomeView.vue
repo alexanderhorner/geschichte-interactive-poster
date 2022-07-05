@@ -197,9 +197,10 @@ const props = defineProps(['component'])
   display: grid;
   grid-template-columns: 1fr repeat(5, 2fr) 1fr;
   row-gap: 150px;
-  margin-top: min(100vh, 100vw);
+  margin-top: 100vh;
 
   @media screen and (max-width: 1080px) {
+    padding-top: 20px;
     grid-template-columns: 1fr repeat(5, 130px) 1fr;
     row-gap: 20px;
   }
