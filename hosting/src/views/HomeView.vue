@@ -66,9 +66,16 @@ const props = defineProps(['component'])
     <div>{{ component }}</div>
 
     <section class="cdu-anti-kommunismus">
-      <img data-aosinitial="fade-right" class="img-big " src="@/assets/img/cdu-anti-kommunismus.jpg" alt="Propagandafoto mit Text: CDU schützt vor Enteignung">
+      <img data-aosinitial="fade-right" class="img-big " src="@/assets/img/cdu-anti-kommunismus.jpg" alt="Propagandafoto mit Text: CDU schützt vor Enteignung"> 
       <div data-aosinitial="fade-left" class="info">
         <h2 class="info-headline">Anti Kommunismus</h2>
+        <div class="info-text" style="margin-bottom: 2rem">
+          <ul>
+            <li>Kommunismus als Feindbilf</li>
+            <li>Zusammenschließung des Westens gegen Kommunismus</li>
+            <li>Wahlerfolg der Parteien gegen den Kommunismus</li>
+          </ul>
+        </div>
         <PlayAudioButton></PlayAudioButton>
       </div>
     </section>
@@ -249,15 +256,34 @@ const props = defineProps(['component'])
 
   section {
     @media screen and (max-width: 1080px) {
+
       img {
         grid-column: 2 / span 5 !important;
       }
+
       .info {
         grid-column: 2 / span 5 !important;
         padding: 0;
         padding-left: 0;
         padding-right: 0;
+        margin-bottom: 150px;
+
+        .info-headline {
+          margin-top: 0.4em;
+        }
       }
+
+      @for $i from 1 through 3 {
+        &:nth-of-type(#{$i}) {
+          .img-big {
+            order: $i * 2;
+          }
+          .info {
+            order: $i * 2 + 1;
+          }
+        }
+      }
+
     }
   }
   
