@@ -170,6 +170,7 @@ const props = defineProps(['component'])
     .title-secondary {
       font-style: italic;
       margin-left: 5px;
+      font-size: 16px;
     }
   }
 }
