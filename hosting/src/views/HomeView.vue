@@ -200,6 +200,11 @@ const props = defineProps(['component'])
   margin-top: min(100vh, 100vw);
 
   @media screen and (max-width: 1080px) {
+    grid-template-columns: 1fr repeat(5, 130px) 1fr;
+    row-gap: 20px;
+  }
+
+  @media screen and (max-width: 690px) {
     grid-template-columns: 20px repeat(5, 1fr) 20px;
     row-gap: 20px;
   }
