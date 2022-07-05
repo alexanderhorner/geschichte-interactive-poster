@@ -126,6 +126,15 @@ const props = defineProps(['component'])
   }
 }
 
+@supports not (display: contents) {
+  * {
+    display: none !important;
+  }
+  .no-css-grid-support {
+    display: block !important;
+  }
+}
+
 @keyframes zoomIn {
   0% {
     transform: scale(0.7);
