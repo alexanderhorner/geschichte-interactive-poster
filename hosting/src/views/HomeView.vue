@@ -55,7 +55,7 @@ const props = defineProps(['component'])
 
   <section name="top" class="hero-section">
     <div class="titles" style="overflow: visible;">
-      <h1 class="title-main">Deutschlands Aufschwung</h1>
+      <h1 class="title-main">Westdeutschlands Aufschwung</h1>
       <div class="title-secondary">presented by History Extreme</div>
     </div>
   </section>
@@ -158,11 +158,11 @@ const props = defineProps(['component'])
     padding-bottom: 5vh;
     margin: 0 2rem;
 
-    @media screen and (max-width: 600px) {
-      font-size: 2.5vw;
+    @media screen and (max-width: 750px) {
+      font-size: 2.25vw;
     }
 
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1250px) {
       text-align: center;
     }
 
