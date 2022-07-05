@@ -23,10 +23,7 @@ const responsiveAnimation = () => {
 }
 
 onMounted(() => {
-  const aosElements = content.value.querySelectorAll('[data-aosinitial]')
-  aosElements.forEach((element) => {
-    element.dataset.aos = element.dataset.aosinitial
-  })
+  responsiveAnimation()
   window.addEventListener('resize', responsiveAnimation)
 })
 
