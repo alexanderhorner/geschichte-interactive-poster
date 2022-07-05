@@ -19,5 +19,9 @@ import { RouterView } from 'vue-router'
   text-align: center;
   color: hsl(0deg, 0%, 50%);
   margin-bottom: 10px;
+  
+  @media screen and (max-width: 600px) {
+    font-size: 10px;
+  }
 }
 </style>
