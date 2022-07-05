@@ -71,7 +71,7 @@ const props = defineProps(['component'])
         <h2 class="info-headline">Anti Kommunismus</h2>
         <div class="info-text" style="margin-bottom: 2rem">
           <ul>
-            <li>Kommunismus als Feindbilf</li>
+            <li>Kommunismus als Feindbild</li>
             <li>Zusammenschließung des Westens gegen Kommunismus</li>
             <li>Wahlerfolg der Parteien gegen den Kommunismus</li>
           </ul>
