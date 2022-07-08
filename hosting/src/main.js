@@ -12,11 +12,11 @@ app.mount('#app')
 
 
 // const firebaseConfig = {
-//     apiKey: "AIzaSyCDsYqlmzMxcT1RasTU4Qt0nHdPGuZ6eCw",
-//     authDomain: "geschichte-interactive-poster.firebaseapp.com",
-//     databaseURL: "https://geschichte-interactive-poster-default-rtdb.europe-west1.firebasedatabase.app",
-//     projectId: "geschichte-interactive-poster",
-//     storageBucket: "geschichte-interactive-poster.appspot.com",
-//     messagingSenderId: "872529669655",
-//     appId: "1:872529669655:web:a09ed96b59b807faa33652"
-//   };
+//   apiKey: "AIzaSyCDsYqlmzMxcT1RasTU4Qt0nHdPGuZ6eCw",
+//   authDomain: "geschichte-interactive-poster.firebaseapp.com",
+//   databaseURL: "https://geschichte-interactive-poster-default-rtdb.europe-west1.firebasedatabase.app",
+//   projectId: "geschichte-interactive-poster",
+//   storageBucket: "geschichte-interactive-poster.appspot.com",
+//   messagingSenderId: "872529669655",
+//   appId: "1:872529669655:web:072998c483e4b182a33652"
+// };
