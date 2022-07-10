@@ -41,6 +41,39 @@ onMounted(() => {
     AOS.refresh()
   }, {once: true});
 })
+
+
+
+
+
+
+// konami code
+{
+  const pattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+  let current = 0;
+
+  const listener = (event) => {
+    // If the key isn't in the pattern, or isn't the current key in the pattern, reset
+    if (pattern.indexOf(event.key) < 0 || event.key !== pattern[current]) {
+      current = 0;
+      return;
+    }
+
+    // Update how much of the pattern is complete
+    current++;
+
+    // If complete, alert and reset
+    if (pattern.length === current) {
+      current = 0;
+      window.alert('You found it!');
+    }
+  }
+  onMounted(() => document.addEventListener('keydown', listener))
+}
+
+
+
+
 </script>
 
 <template>
@@ -106,7 +139,7 @@ onMounted(() => {
 
         <ReadMoreButton link="integration-der-vertriebenen"></ReadMoreButton>
       </div>
-      <img data-aosinitial="fade-left" class="img-big" src="@/assets/img/wirtschaftswunder.jpg" alt="">
+      <img data-aosinitial="fade-left" class="img-big" src="@/assets/img/vertreibene.jpg" alt="">
     </section>
 
     <section class="verwestlichung-und-amerikanisierung">
@@ -132,9 +165,8 @@ onMounted(() => {
 
 
     <section class="cdu-anti-kommunismus">
-      <img data-aosinitial="fade-right" class="img-big " src="@/assets/img/cdu-anti-kommunismus.jpg" alt="Propagandafoto mit Text: CDU schützt vor Enteignung"> 
-      <div data-aosinitial="fade-left" class="info">
-        <h2 class="info-headline">Anti Kommunismus</h2>
+      <div data-aosinitial="fade-right" class="info">
+        <h2 class="info-headline">Antikommunismus</h2>
         <div class="info-text" style="margin-bottom: 2rem">
           <ul>
             <li>Kommunismus als Feindbild</li>
@@ -142,8 +174,10 @@ onMounted(() => {
             <li>Wahlerfolg der Parteien gegen den Kommunismus</li>
           </ul>
         </div>
-        <PlayAudioButton link="playertest"></PlayAudioButton>
+        <!-- <PlayAudioButton link="playertest"></PlayAudioButton> -->
+        <ReadMoreButton link="Antikommunismus"></ReadMoreButton>
       </div>
+      <img data-aosinitial="fade-left" class="img-big " src="@/assets/img/cdu-anti-kommunismus.jpg" alt="Propagandafoto mit Text: CDU schützt vor Enteignung"> 
     </section>
 
   </main>
@@ -302,11 +336,11 @@ onMounted(() => {
 
   section.integration-der-vertriebenen {
     img {
-      grid-column: 4 / span 3;
+      grid-column: 5 / span 2;
     }
 
     .info {
-      grid-column: 2 / span 2;
+      grid-column: 2 / span 3;
       padding-left: 0;
     }
   }
@@ -325,12 +359,12 @@ onMounted(() => {
   // cdu-anti-kommunismus
   section.cdu-anti-kommunismus {
     img {
-      grid-column: 2 / span 2;
+      grid-column: 5 / span 2;
     }
 
     .info {
-      grid-column: 4 / span 3;
-      padding-right: 0;
+      grid-column: 2 / span 3;
+      padding-left: 0;
     }
   }
 

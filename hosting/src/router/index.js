@@ -2,8 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import HomeView from '@/views/HomeView.vue'
 import PlayerModal from '@/components/PlayerModal.vue'
-import Wirtschaftswunder from '../views/modals/Wirtschaftswunder.vue'
-import VorraussetzungendesWirtschaftswunder from '../views/modals/VorraussetzungendesWirtschaftswunder.vue'
+import Wirtschaftswunder from '@/views/modals/Wirtschaftswunder.vue'
+import VorraussetzungendesWirtschaftswunder from '@/views/modals/VorraussetzungendesWirtschaftswunder.vue'
+import AntikommunismusVue from '@/views/modals/Antikommunismus.vue'
+import PageNotFound from '@/views/PageNotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,9 +29,14 @@ const router = createRouter({
         {
           path: "Vorraussetzungen-des-Wirtschaftswunder",
           component: VorraussetzungendesWirtschaftswunder
+        },
+        {
+          path: "Antikommunismus",
+          component: AntikommunismusVue
         }
       ]
-    }
+    },
+    { path: '/:pathMatch(.*)*', component: PageNotFound },
     // {
     //   path: '/about',
     //   name: 'about',

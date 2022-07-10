@@ -27,6 +27,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .button-container {
+  overflow: hidden;
   text-decoration: none;
   color: inherit;
   padding: 10px;
@@ -39,15 +40,26 @@ const props = defineProps({
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.15s;
+  font-size: 1.2rem;
+
+  @media screen and (max-width: 450px) {
+    height: 50px;
+    font-size: 1rem;
+  }
 
   .icon {
     height: 100%;
+    flex-shrink: 0;
     padding: 3px;
-    margin-right: 1.2rem;
+    margin-right: 0.8em;
+
+    @media screen and (max-width: 450px) {
+      // height: 50px;
+      // font-size: 1rem;
+    }
   }
 
   .prompt-text {
-    font-size: 1.2rem;
   }
 
   &:hover {

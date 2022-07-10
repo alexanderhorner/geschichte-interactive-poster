@@ -35,10 +35,14 @@ const goBack = () => {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: calc(100% - 20px);
-  max-width: min(1100px, 100vw);
+  width: calc(100% - 50px);
+  max-width: 1100px;
   overflow: scroll;
   max-height: 100vh;
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
 }
 
 .background {
