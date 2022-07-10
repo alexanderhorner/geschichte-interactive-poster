@@ -1,5 +1,5 @@
 <script setup>
-import Play from '@/components/icons/Play.vue';
+import ReadMoreIcon from '@/components/icons/ReadMore.vue';
 
 const props = defineProps({
   link: {
@@ -10,9 +10,14 @@ const props = defineProps({
 </script>
 
 <template>
-  <router-link class="container" :to="link">
-    <Play class="icon"></Play>
-    <div class="prompt-text">Audio abspielen</div>
+  <router-link class="button-container" :to="link">
+    <ReadMoreIcon class="icon"></ReadMoreIcon>
+    <div class="prompt-text">
+      <slot>
+        Mehr lesen
+      </slot>
+    </div>
+    
   </router-link>
   <!-- <div class="container">
     <Play class="icon"></Play>
@@ -21,7 +26,7 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
-.container {
+.button-container {
   text-decoration: none;
   color: inherit;
   padding: 10px;
@@ -30,13 +35,14 @@ const props = defineProps({
   max-width: 100%;
   display: inline-flex;
   align-items: center;
-  background-color: hsl(0deg, 0%, 20%);
+  background-color: hsla(0deg, 0%, 100%, 15%);
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.15s;
 
   .icon {
     height: 100%;
+    padding: 3px;
     margin-right: 1.2rem;
   }
 

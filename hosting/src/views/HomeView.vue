@@ -5,6 +5,7 @@ import { onMounted, ref, onUnmounted } from 'vue'
 import AOS from 'aos'
 
 import PlayAudioButton from '@/components/PlayAudioButton.vue';
+import ReadMoreButton from '@/components/ReadMoreButton.vue';
 
 const content = ref(null)
 
@@ -40,8 +41,6 @@ onMounted(() => {
     AOS.refresh()
   }, {once: true});
 })
-
-const props = defineProps(['component'])
 </script>
 
 <template>
@@ -62,8 +61,75 @@ const props = defineProps(['component'])
 
   <main ref="content" class="content">
 
-    <!-- <component :is="component"></component> -->
-    <div>{{ component }}</div>
+  
+
+    <section class="wirtschaftswunder">
+      <div data-aosinitial="fade-right" class="info">
+        <h2 class="info-headline">Wirtschafts&shy;wunder</h2>
+
+        <div class="info-text" style="margin-bottom: 1rem">
+          <ul>
+            <li>Wirtschaftswunder in der BRD ab 1950</li>
+            <li>Legitimierung der Bundesrepublik <span style="white-space: nowrap">➤ Gründungsmythos</span></li>
+            <li>Hauptursachen des Wunders: Zusammenspiel aus geschickter Politik, Produktionspotenzial, Arbeitskräftepotential, Entwicklungen und Ereignissen</li>
+            <li>Merkmale des Wunders: Volbeschäftigung, "Konsumwellen", steigender Lebensstandart</li>
+            <li>freier Wettbewerb als sozialer Ausgleich: "Wohlstand für Alle"</li>
+            <li>Weitere Legitimation und Akzeptanz durch Beseitigung von Not</li>
+          </ul>
+        </div>
+
+        <ReadMoreButton link="Wirtschaftswunder"></ReadMoreButton>
+      </div>
+      <img data-aosinitial="fade-left" class="img-big" src="@/assets/img/wirtschaftswunder.jpg" alt="">
+    </section>
+
+
+    <section class="währungsreform">
+      <img data-aosinitial="fade-right" class="img-big" src="@/assets/img/währungsreform.jpg" alt="">
+      <div data-aosinitial="fade-left" class="info">
+        <h2 class="info-headline">Währungs&shy;reform</h2>
+        <PlayAudioButton link="playertest"></PlayAudioButton>
+      </div>
+    </section>
+
+    <section class="integration-der-vertriebenen">
+      <div data-aosinitial="fade-right" class="info">
+        <h2 class="info-headline">Integration der Vertriebenen</h2>
+
+        <div class="info-text" style="margin-bottom: 1rem">
+          <ul>
+            <li>Die Integration der vertriebenen als Herausforderung</li>
+            <li>Integrationshürden: soziale Spannung, Kulturschock, Ausgrenzung und Diskriminierung, soz. Abstieg der Vertriebenen, Segregation</li>
+            <li></li>
+          </ul>
+        </div>
+
+        <ReadMoreButton link="integration-der-vertriebenen"></ReadMoreButton>
+      </div>
+      <img data-aosinitial="fade-left" class="img-big" src="@/assets/img/wirtschaftswunder.jpg" alt="">
+    </section>
+
+    <section class="verwestlichung-und-amerikanisierung">
+      <img data-aosinitial="fade-right" class="img-big" src="@/assets/img/germany-at-the-crossroad.jpg" alt="">
+      <div data-aosinitial="fade-left" class="info">
+        <h2 class="info-headline">Verwestlichung und Amerikanisierung</h2>
+
+        <div class="info-text" style="margin-bottom: 1rem">
+          <ul>
+            <li>1949 Bildung einer konservativen Gesellschaft</li>
+            <li>Sehnen nach Normalität und Sicherheit durch Instabilität der BRD </li>
+            <li>Amerikanisierung und Verwestlichung der Gesellschaft durch Populär- und Jugendkultur</li>
+            <li>Amerikanisierung: Veränderung einer Gesellschaft hinsichtlich ihrer Einrichtung, Werte, Traditinoen und Verhaltensweisen nach dem Vorbild der USA</li>
+            <li>Verwestlichung: Übernahme von politischen Ideen des Westens <span style="white-space: nowrap">➤ Liberalismus</span> und Pluralismus</li>
+          </ul>
+        </div>
+
+        <ReadMoreButton link="verwestlichung-und-amerikanisierung"></ReadMoreButton>
+      </div>
+    </section>
+
+    
+
 
     <section class="cdu-anti-kommunismus">
       <img data-aosinitial="fade-right" class="img-big " src="@/assets/img/cdu-anti-kommunismus.jpg" alt="Propagandafoto mit Text: CDU schützt vor Enteignung"> 
@@ -76,30 +142,7 @@ const props = defineProps(['component'])
             <li>Wahlerfolg der Parteien gegen den Kommunismus</li>
           </ul>
         </div>
-        <PlayAudioButton></PlayAudioButton>
-      </div>
-    </section>
-
-    <!-- <img class="img-big name" src="@/assets/img/.jpg" alt="">
-    <div class="info name">
-      <h2 class="info-headline name">Anti Kommunismus</h2>
-      <PlayAudioButton></PlayAudioButton>
-    </div> -->
-
-    <section class="wirtschaftswunder">
-      <div data-aosinitial="fade-right" class="info">
-        <h2 class="info-headline">Wirtschafts&shy;wunder</h2>
-        <div class="info-text" style="margin-bottom: 1rem">„Wohlstand für alle“ - Ludwig Erhard</div>
-        <PlayAudioButton></PlayAudioButton>
-      </div>
-      <img data-aosinitial="fade-left" class="img-big" src="@/assets/img/wirtschaftswunder.jpg" alt="">
-    </section>
-
-    <section class="währungsreform">
-      <img data-aosinitial="fade-right" class="img-big" src="@/assets/img/währungsreform.jpg" alt="">
-      <div data-aosinitial="fade-left" class="info">
-        <h2 class="info-headline">Währungs&shy;reform</h2>
-        <PlayAudioButton></PlayAudioButton>
+        <PlayAudioButton link="playertest"></PlayAudioButton>
       </div>
     </section>
 
@@ -232,18 +275,6 @@ const props = defineProps(['component'])
   section {
     display: contents;
   }
-
-  // cdu-anti-kommunismus
-  section.cdu-anti-kommunismus {
-    img {
-      grid-column: 2 / span 2;
-    }
-
-    .info {
-      grid-column: 4 / span 3;
-      padding-right: 0;
-    }
-  }
   
   // wirtschaftswunder
   section.wirtschaftswunder {
@@ -269,6 +300,40 @@ const props = defineProps(['component'])
     }
   }
 
+  section.integration-der-vertriebenen {
+    img {
+      grid-column: 4 / span 3;
+    }
+
+    .info {
+      grid-column: 2 / span 2;
+      padding-left: 0;
+    }
+  }
+
+  section.verwestlichung-und-amerikanisierung {
+    img {
+      grid-column: 2 / span 2;
+    }
+
+    .info {
+      grid-column: 4 / span 3;
+      padding-right: 0;
+    }
+  }
+
+  // cdu-anti-kommunismus
+  section.cdu-anti-kommunismus {
+    img {
+      grid-column: 2 / span 2;
+    }
+
+    .info {
+      grid-column: 4 / span 3;
+      padding-right: 0;
+    }
+  }
+
   section {
     @media screen and (max-width: 1080px) {
 
@@ -288,7 +353,7 @@ const props = defineProps(['component'])
         }
       }
 
-      @for $i from 1 through 3 {
+      @for $i from 1 through 5 {
         &:nth-of-type(#{$i}) {
           .img-big {
             order: $i * 2;
