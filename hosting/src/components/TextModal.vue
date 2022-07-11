@@ -19,6 +19,7 @@ import BackLink from '@/components/BackLink.vue'
 <style lang="scss" scoped>
 
 .container {
+  margin: 100px auto;
   background-color: hsl(0deg, 0%, 20%);
   padding: 30px 50px;
   border-radius: 10px;
@@ -27,6 +28,15 @@ import BackLink from '@/components/BackLink.vue'
   @media screen and (max-width: 700px) {
     padding: 30px 20px;
     border-radius: 0;
+  }
+}
+
+::v-deep(figure) {
+  margin: 0;
+
+  figcaption {
+    font-size: 0.8rem;
+    color: hsl(0deg, 0%, 70%);
   }
 }
 

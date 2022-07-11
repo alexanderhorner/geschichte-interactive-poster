@@ -23,9 +23,14 @@ import { RouterLink } from 'vue-router'
 
         <h2>Antikommunistische Innenpolitik</h2>
 
-        <p>Auch Innenpolitisch prägte sich der Antikommunisms immer mehr aus. 1956 wurde die Kommunistische Partei Deutschlands „KPD" verboten. Außerdem erzielten Parteien großen Erfolg indem sie den Kommunismus als Feindbild darstellten, gegen das sich Deutschland vereinen muss. </p>
+        <p>Auch Innenpolitisch prägte sich der Antikommunismus immer mehr aus. 1956 wurde die Kommunistische Partei Deutschlands „KPD" verboten. Außerdem erzielten Parteien großen Erfolg indem sie den Kommunismus als Feindbild darstellten, gegen das sich Deutschland vereinen muss. </p>
 
-        <img src="@/assets/img/cdu-anti-kommunismus2.jpg" alt="">
+        <h3>Der Antikommunismus gab den Deutschen einen gemeinsamen Feind, den das Volk vereinte.</h3>
+
+        <figure>
+            <img src="@/assets/img/cdu-anti-kommunismus2.jpg" alt="">
+            <figcaption>Wahlplakat der CDU</figcaption>
+        </figure>
 
     </TextModal>
 </template>

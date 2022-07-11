@@ -6,6 +6,9 @@ import Wirtschaftswunder from '@/views/modals/Wirtschaftswunder.vue'
 import VorraussetzungendesWirtschaftswunder from '@/views/modals/VorraussetzungendesWirtschaftswunder.vue'
 import AntikommunismusVue from '@/views/modals/Antikommunismus.vue'
 import PageNotFound from '@/views/PageNotFound.vue'
+import Währungsreform from '@/views/modals/Währungsreform.vue'
+import IntegrationderVertriebenen from '@/views/modals/IntegrationderVertriebenen.vue'
+import VerwestlichungundAmerikanisierung from '@/views/modals/VerwestlichungundAmerikanisierung.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,7 +36,19 @@ const router = createRouter({
         {
           path: "Antikommunismus",
           component: AntikommunismusVue
-        }
+        },
+        // {
+        //   path: "Währungsreform",
+        //   component: Währungsreform
+        // },
+        {
+          path: "Integration-der-Vertriebenen",
+          component: IntegrationderVertriebenen
+        },
+        {
+          path: "Verwestlichung-und-Amerikanisierung",
+          component: VerwestlichungundAmerikanisierung
+        },
       ]
     },
     { path: '/:pathMatch(.*)*', component: PageNotFound },

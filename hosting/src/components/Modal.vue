@@ -30,7 +30,17 @@ const goBack = () => {
 </template>
 
 <style lang="scss" scoped>
+@keyframes appear {
+  0% {
+    filter: blur(20px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+
 .modal {
+  animation: 0.2s ease-out 0s 1 appear;
   position: fixed;
   top: 50%;
   left: 50%;

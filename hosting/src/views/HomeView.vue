@@ -65,7 +65,7 @@ onMounted(() => {
     // If complete, alert and reset
     if (pattern.length === current) {
       current = 0;
-      window.alert('You found it!');
+      window.alert('OMG Easter Egg!');
     }
   }
   onMounted(() => document.addEventListener('keydown', listener))
@@ -121,7 +121,8 @@ onMounted(() => {
       <img data-aosinitial="fade-right" class="img-big" src="@/assets/img/währungsreform.jpg" alt="">
       <div data-aosinitial="fade-left" class="info">
         <h2 class="info-headline">Währungs&shy;reform</h2>
-        <PlayAudioButton link="playertest"></PlayAudioButton>
+        <div class="info-text">Insbesondere die Währungsreform legt den Grundstein für das Wunder. Durch die Einführung der D-Mark werden Tauschbörse und Schwarzmarkt eingedämmt. Jeder Bürger erhält zunächst 40 D- Mark und danach nochmal 20 D-Mark um den Privatkonsum anzukurbeln und somit die Wirtschaftslage weiter zu bessern.</div>
+        <!-- <ReadMoreButton link="Währungsreform"></ReadMoreButton> -->
       </div>
     </section>
 
@@ -133,11 +134,10 @@ onMounted(() => {
           <ul>
             <li>Die Integration der vertriebenen als Herausforderung</li>
             <li>Integrationshürden: soziale Spannung, Kulturschock, Ausgrenzung und Diskriminierung, soz. Abstieg der Vertriebenen, Segregation</li>
-            <li></li>
           </ul>
         </div>
 
-        <ReadMoreButton link="integration-der-vertriebenen"></ReadMoreButton>
+        <ReadMoreButton link="Integration-der-Vertriebenen"></ReadMoreButton>
       </div>
       <img data-aosinitial="fade-left" class="img-big" src="@/assets/img/vertreibene.jpg" alt="">
     </section>
@@ -157,7 +157,7 @@ onMounted(() => {
           </ul>
         </div>
 
-        <ReadMoreButton link="verwestlichung-und-amerikanisierung"></ReadMoreButton>
+        <ReadMoreButton link="Verwestlichung-und-Amerikanisierung"></ReadMoreButton>
       </div>
     </section>
 
