@@ -14,6 +14,8 @@ const content = ref(null)
 
 const title = ref(null)
 const heroSection = ref(null)
+const secondarytitle = ref(null)
+
 
 const responsiveAnimation = () => {
   const aosElements = content.value.querySelectorAll('[data-aosinitial]')
@@ -72,9 +74,12 @@ onMounted(() => {
     // If complete, alert and reset
     if (pattern.length === current) {
       current = 0
-      window.alert('Unlimited Wirtschaftswunder!');
-      title.value.innerHTML = "Balance: 99999999999999999DM"
-      heroSection.value.style.backgroundImage = `url('${MoneyEasterEggPic}')`
+      // window.alert('Unlimited Wirtschaftswunder!');
+      if (confirm('Wollen Sie den cheat "Unlimited Wirtschaftswunder" aktivieren? Sie bekommen keine Achievements mehr.')) {
+        title.value.innerHTML = "Balance: 99999999999999999DM"
+        secondarytitle.value.innerHTML = "Unlimited Wirtschaftswunder Cheat aktiviert!!!"
+        heroSection.value.style.backgroundImage = `url('${MoneyEasterEggPic}')`
+      }
     }
   }
   onMounted(() => document.addEventListener('keydown', listener))
@@ -98,7 +103,7 @@ onMounted(() => {
   <section name="top" class="hero-section" ref="heroSection">
     <div class="titles" style="overflow: visible;">
       <h1 class="title-main" ref="title">Westdeutschlands Aufschwung</h1>
-      <div class="title-secondary">presented by History Extreme</div>
+      <div ref="secondarytitle" class="title-secondary">presented by History Extreme</div>
     </div>
     <div class="scroll-down">
       <div style="margin-bottom: 1.5em; color: hsl(0deg, 0%, 70%);">Nach unten scrollen</div>
