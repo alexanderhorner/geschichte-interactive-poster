@@ -325,11 +325,11 @@ onMounted(() => {
   // wirtschaftswunder
   section.wirtschaftswunder {
     img {
-      grid-column: 4 / span 3;
+      grid-column: 5 / span 2;
     }
 
     .info {
-      grid-column: 2 / span 2;
+      grid-column: 2 / span 3;
       padding-left: 0;
     }
   }
