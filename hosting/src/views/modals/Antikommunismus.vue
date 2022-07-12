@@ -9,7 +9,7 @@ import { RouterLink } from 'vue-router'
         <h1>Antikommunismus</h1>
 
 
-        <p>Nach dem zweiten Weltkrieg war die Welt in zwei Teile gespalten: freier, kapitalistischer Westen gegen totalitärer, kommunistischer Osten — USA gegen Soviet Union. Diese Spaltung wurde besonders sichtbar mit der Gründung der zwei deutschen Staaten: BRD, nach westlichem Vorbild, und der DDR, nach sowjetischen Vorbild.  </p>
+        <p>Nach dem zweiten Weltkrieg war die Welt in zwei Teile gespalten: freier, kapitalistischer Westen gegen totalitärer, kommunistischer Osten — USA gegen Soviet Union. Diese Spaltung wurde besonders sichtbar mit der Gründung der zwei deutschen Staaten: BRD, nach westlichem Vorbild (23. Mai 1949), und der DDR, nach sowjetischen Vorbild (7. Oktober 1949).  </p>
 
         <h2>1949 Alleinvertretungsanspruch </h2>
 
