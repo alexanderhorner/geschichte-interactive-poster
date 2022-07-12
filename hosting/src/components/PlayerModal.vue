@@ -10,8 +10,6 @@ const props = defineProps(["mp3src"])
 
 const plyr = ref(null)
 
-console.log(props.mp3src)
-
 onMounted(() => {
   // window.test123 = plyr.value
   plyr.value.player.play()

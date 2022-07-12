@@ -1,12 +1,13 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+// import { RouterLink } from 'vue-router'
+import BackLink from '../components/BackLink.vue';
 </script>
 
 <template>
   <div class="container">
     <div>
       <h1>404 - Seite existiert nicht</h1>
-      <div>Ups, scheint als wäre was schief geloffen. <RouterLink to="/">Startseite</RouterLink></div>
+      <div>Ups, scheint als wäre was schief geloffen. <BackLink /></div>
     </div>
   </div>
   <div class="placeholder"></div>

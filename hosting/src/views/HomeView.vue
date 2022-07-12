@@ -4,10 +4,15 @@ import { onMounted, ref, onUnmounted } from 'vue'
 
 import AOS from 'aos'
 
-import PlayAudioButton from '@/components/PlayAudioButton.vue';
 import ReadMoreButton from '@/components/ReadMoreButton.vue';
+import PlayVideoButton from '@/components/PlayVideoButton.vue';
+
+import MoneyEasterEggPic from '@/assets/img/money.jpg'
 
 const content = ref(null)
+
+const title = ref(null)
+const heroSection = ref(null)
 
 const responsiveAnimation = () => {
   const aosElements = content.value.querySelectorAll('[data-aosinitial]')
@@ -49,8 +54,9 @@ onMounted(() => {
 
 // konami code
 {
-  const pattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-  let current = 0;
+  const pattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a']
+  // const pattern = ['b', 'a']
+  let current = 0
 
   const listener = (event) => {
     // If the key isn't in the pattern, or isn't the current key in the pattern, reset
@@ -60,15 +66,18 @@ onMounted(() => {
     }
 
     // Update how much of the pattern is complete
-    current++;
+    current++
 
     // If complete, alert and reset
     if (pattern.length === current) {
-      current = 0;
-      window.alert('OMG Easter Egg!');
+      current = 0
+      window.alert('Unlimited Wirtschaftswunder!');
+      title.value.innerHTML = "Balance: 99999999999999999DM"
+      heroSection.value.style.backgroundImage = `url('${MoneyEasterEggPic}')`
     }
   }
   onMounted(() => document.addEventListener('keydown', listener))
+  onUnmounted(() => document.removeEventListener('keydown', listener))
 }
 
 
@@ -85,9 +94,9 @@ onMounted(() => {
   </header>-->
   <div class="no-css-grid-support">Dieser Browser ist zu alt. Aktualisieren Sie ihn und versuchen Sie es erneut.</div>
 
-  <section name="top" class="hero-section">
+  <section name="top" class="hero-section" ref="heroSection">
     <div class="titles" style="overflow: visible;">
-      <h1 class="title-main">Westdeutschlands Aufschwung</h1>
+      <h1 class="title-main" ref="title">Westdeutschlands Aufschwung</h1>
       <div class="title-secondary">presented by History Extreme</div>
     </div>
   </section>
@@ -97,7 +106,7 @@ onMounted(() => {
   
 
     <section class="wirtschaftswunder">
-      <div data-aosinitial="fade-right" class="info">
+      <div data-aosinitial="fade-right" data-aos-anchor=".wirtschaftswunder > .img-big" class="info">
         <h2 class="info-headline">Wirtschafts&shy;wunder</h2>
 
         <div class="info-text" style="margin-bottom: 1rem">
@@ -112,6 +121,7 @@ onMounted(() => {
         </div>
 
         <ReadMoreButton link="Wirtschaftswunder"></ReadMoreButton>
+        <PlayVideoButton style="margin-top: 1em;" link="Herr-Schmitt-Video">CDU-Wahlwerbespot</PlayVideoButton>
       </div>
       <img data-aosinitial="fade-left" class="img-big" src="@/assets/img/wirtschaftswunder.jpg" alt="">
     </section>
@@ -119,21 +129,23 @@ onMounted(() => {
 
     <section class="währungsreform">
       <img data-aosinitial="fade-right" class="img-big" src="@/assets/img/währungsreform.jpg" alt="">
-      <div data-aosinitial="fade-left" class="info">
+      <div data-aosinitial="fade-left" data-aos-anchor=".währungsreform > .img-big" class="info">
         <h2 class="info-headline">Währungs&shy;reform</h2>
-        <div class="info-text">Insbesondere die Währungsreform legt den Grundstein für das Wunder. Durch die Einführung der D-Mark werden Tauschbörse und Schwarzmarkt eingedämmt. Jeder Bürger erhält zunächst 40 D- Mark und danach nochmal 20 D-Mark um den Privatkonsum anzukurbeln und somit die Wirtschaftslage weiter zu bessern.</div>
-        <!-- <ReadMoreButton link="Währungsreform"></ReadMoreButton> -->
+        <!-- <div class="info-text">Insbesondere die Währungsreform legt den Grundstein für das Wunder. Durch die Einführung der D-Mark werden Tauschbörse und Schwarzmarkt eingedämmt. Jeder Bürger erhält zunächst 40 D- Mark und danach nochmal 20 D-Mark um den Privatkonsum anzukurbeln und somit die Wirtschaftslage weiter zu bessern.</div> -->
+        <ReadMoreButton link="Währungsreform"></ReadMoreButton>
       </div>
     </section>
 
     <section class="integration-der-vertriebenen">
-      <div data-aosinitial="fade-right" class="info">
+      <div data-aosinitial="fade-right" data-aos-anchor=".integration-der-vertriebenen > .img-big" class="info">
         <h2 class="info-headline">Integration der Vertriebenen</h2>
 
         <div class="info-text" style="margin-bottom: 1rem">
           <ul>
             <li>Die Integration der vertriebenen als Herausforderung</li>
             <li>Integrationshürden: soziale Spannung, Kulturschock, Ausgrenzung und Diskriminierung, soz. Abstieg der Vertriebenen, Segregation</li>
+            <li>Integrationserfolg in Gebieten mit hohem Arbeiterbedarf</li>
+            <li>Modernisierung der Gesellschaft</li>
           </ul>
         </div>
 
@@ -144,7 +156,7 @@ onMounted(() => {
 
     <section class="verwestlichung-und-amerikanisierung">
       <img data-aosinitial="fade-right" class="img-big" src="@/assets/img/germany-at-the-crossroad.jpg" alt="">
-      <div data-aosinitial="fade-left" class="info">
+      <div data-aosinitial="fade-left" data-aos-anchor=".verwestlichung-und-amerikanisierung > .img-big" class="info">
         <h2 class="info-headline">Verwestlichung und Amerikanisierung</h2>
 
         <div class="info-text" style="margin-bottom: 1rem">
@@ -165,7 +177,7 @@ onMounted(() => {
 
 
     <section class="cdu-anti-kommunismus">
-      <div data-aosinitial="fade-right" class="info">
+      <div data-aosinitial="fade-right" data-aos-anchor=".cdu-anti-kommunismus > .img-big" class="info">
         <h2 class="info-headline">Antikommunismus</h2>
         <div class="info-text" style="margin-bottom: 2rem">
           <ul>

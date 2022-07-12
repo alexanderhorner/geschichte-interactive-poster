@@ -9,6 +9,7 @@ import PageNotFound from '@/views/PageNotFound.vue'
 import Währungsreform from '@/views/modals/Währungsreform.vue'
 import IntegrationderVertriebenen from '@/views/modals/IntegrationderVertriebenen.vue'
 import VerwestlichungundAmerikanisierung from '@/views/modals/VerwestlichungundAmerikanisierung.vue'
+import HerrSchmittVideo from '@/views/modals/HerrSchmittVideo.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -37,10 +38,10 @@ const router = createRouter({
           path: "Antikommunismus",
           component: AntikommunismusVue
         },
-        // {
-        //   path: "Währungsreform",
-        //   component: Währungsreform
-        // },
+        {
+          path: "Währungsreform",
+          component: Währungsreform
+        },
         {
           path: "Integration-der-Vertriebenen",
           component: IntegrationderVertriebenen
@@ -49,6 +50,10 @@ const router = createRouter({
           path: "Verwestlichung-und-Amerikanisierung",
           component: VerwestlichungundAmerikanisierung
         },
+        {
+          path: "Herr-Schmitt-Video",
+          component: HerrSchmittVideo
+        }
       ]
     },
     { path: '/:pathMatch(.*)*', component: PageNotFound },

@@ -8,9 +8,11 @@ import BackLink from '@/components/BackLink.vue'
 <template>
   
   <Modal>
-    <div class="container">
-      <BackLink></BackLink>
-      <slot></slot>
+
+      <div class="container" @click.stop>
+        <BackLink></BackLink>
+        <slot></slot>
+
     </div>
   </Modal>
 
@@ -44,12 +46,12 @@ import BackLink from '@/components/BackLink.vue'
   max-width: 100%;
 }
 
-// ::v-deep(h1) {
-//   margin-top: 2em;
-//   margin-bottom: 0.5em;
-// }
+::v-deep(h1) {
+  word-wrap: break-word;
+}
 
 ::v-deep(h2) {
+  word-wrap: break-word;
   margin-top: 1em;
   margin-bottom: 0.5em;
 }

@@ -11,18 +11,22 @@ onUnmounted(() => {
   document.querySelector('html').classList.remove("modal-open")
 })
 
-const goBack = () => {
-  history.back()
-}
+// const goBack = () => {
+//   console.log("go back");
+//   console.log(window.history.length > 2);
+  
+// }
+
+const hasHistory = () => window.history.length > 2
 
 </script>
 
 <template>
-  <div class="background" @click="goBack()">
+  <div class="background" @click="hasHistory() ? $router.go(-1) : $router.push('/')">
     <X class="close"></X>
   </div>
 
-  <div class="modal">
+  <div @click="hasHistory() ? $router.go(-1) : $router.push('/')" class="modal">
 
     <slot />
 
