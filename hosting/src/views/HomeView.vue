@@ -234,13 +234,24 @@ onMounted(() => {
   }
 }
 
-@keyframes zoomIn {
+@keyframes startUp {
   0% {
     transform: scale(0.7);
     filter: blur(20px)
   }
   100% {
     transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes startUpCenter {
+  0% {
+    transform: scale(0.7) translateX(-50%);
+    filter: blur(20px)
+  }
+  100% {
+    transform: scale(1) translateX(-50%);
     filter: blur(0);
   }
 }
@@ -262,7 +273,7 @@ onMounted(() => {
   background-image: url('@/assets/img/Heilbronn_1945-darker.jpg');
 
   .titles {
-    animation: 1s ease-out 0s 1 zoomIn;
+    animation: 1s ease-out 0s 1 startUp;
     padding-bottom: 5vh;
     margin: 0 2rem;
 
@@ -290,10 +301,9 @@ onMounted(() => {
   }
 
   .scroll-down {
+    animation: 1s ease-out 0s 1 startUp;
     position: absolute;
     bottom: 30px;
-    left: 50%;
-    transform: translate(-50%);
     display: flex;
     align-items: center;
     flex-direction: column;

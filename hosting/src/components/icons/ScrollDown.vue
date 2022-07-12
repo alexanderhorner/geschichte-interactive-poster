@@ -54,7 +54,7 @@
         .cls-1 {
             width: 100%;
             fill: none;
-            stroke: #FFF;
+            stroke: hsl(0deg, 0%, 60%);
             stroke-miterlimit: 10;
             stroke-width: 2px;
             animation: 2s linear 0s infinite pulse2;
@@ -62,7 +62,7 @@
         }
 
         .line1 {
-            animation-delay: 0;
+            animation-delay: 0s;
         }
         .line2 {
             animation-delay: 0.15s;
