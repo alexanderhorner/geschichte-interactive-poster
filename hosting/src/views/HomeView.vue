@@ -8,6 +8,7 @@ import ReadMoreButton from '@/components/ReadMoreButton.vue';
 import PlayVideoButton from '@/components/PlayVideoButton.vue';
 
 import MoneyEasterEggPic from '@/assets/img/money.jpg'
+import ScrollDown from '../components/icons/ScrollDown.vue'
 
 const content = ref(null)
 
@@ -98,6 +99,10 @@ onMounted(() => {
     <div class="titles" style="overflow: visible;">
       <h1 class="title-main" ref="title">Westdeutschlands Aufschwung</h1>
       <div class="title-secondary">presented by History Extreme</div>
+    </div>
+    <div class="scroll-down">
+      <div style="margin-bottom: 1.5em; color: hsl(0deg, 0%, 70%);">Nach unten scrollen</div>
+      <ScrollDown /> 
     </div>
   </section>
 
@@ -277,6 +282,16 @@ onMounted(() => {
       margin-left: 5px;
       font-size: 16px;
     }
+  }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }
 
