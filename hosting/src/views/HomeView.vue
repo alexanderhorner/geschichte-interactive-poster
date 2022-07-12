@@ -17,7 +17,7 @@ const heroSection = ref(null)
 const responsiveAnimation = () => {
   const aosElements = content.value.querySelectorAll('[data-aosinitial]')
 
-  if (window.innerWidth < 1080) {
+  if (window.innerWidth <= 1080) {
     aosElements.forEach((element) => {
       element.dataset.aos = 'fade-up'
     })

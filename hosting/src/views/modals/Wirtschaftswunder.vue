@@ -14,7 +14,7 @@ import { RouterLink } from 'vue-router'
 
     <ReadMoreButton style="margin-bottom: 1em" link="Vorraussetzungen-des-Wirtschaftswunder">Vorraussetzungen des Wirtschaftswunder</ReadMoreButton>
 
-    <p>Der demokratische Neubeginn bietet Westdeutschland neue Hoffnung. Die Kombination aus Hilfeleistungen des Marschallplans, Pruduktion - und Arbeiterpotenzial und effektive Innenpolitik lässt die West-Deutsche Wirtschaft einen immensen Aufschwung erfahren. Der neuerlangte Wohlstand durch das Wirtschaftswunder, auch wenn zunächst ungerecht verteilt, hilft die soziale Marktwirtschaft als funktionierendes System zu festigen und die Bundesrepublik zu stabilisieren. Viele Reformen des Sozialstaates wie zum Beispiel die Währungsreform 1948 fördern den Wirtschaftlichen Aufschwung noch weiter. </p>
+    <p>Der demokratische Neubeginn bietet Westdeutschland neue Hoffnung. Die Kombination aus Hilfeleistungen des Marschallplans, Pruduktion - und Arbeiterpotenzial und effektive Innenpolitik lässt die West-Deutsche Wirtschaft einen immensen Aufschwung erfahren. Der neuerlangte Wohlstand durch das Wirtschaftswunder, auch wenn zunächst ungerecht verteilt, hilft die soziale Marktwirtschaft als funktionierendes System zu festigen und die Bundesrepublik zu stabilisieren. Viele Reformen wie zum Beispiel die Währungsreform 1948 fördern den Wirtschaftlichen Aufschwung noch weiter. </p>
 
     <h2>Soziale Marktwirtschaft</h2>
       
